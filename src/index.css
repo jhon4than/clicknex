@@ -75,4 +75,45 @@
   .bg-primary-gradient {
     @apply bg-gradient-to-r from-blue-950 to-blue-800;
   }
+  
+  /* Elementos tecnológicos */
+  .tech-dot {
+    @apply absolute w-1 h-1 bg-blue-500 rounded-full;
+    box-shadow: 0 0 10px rgba(0, 83, 222, 0.8), 0 0 20px rgba(0, 83, 222, 0.6);
+    animation: pulse 3s infinite alternate;
+  }
+  
+  .tech-line {
+    @apply absolute h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-30;
+    animation: fadeInOut 8s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0.1; width: 0; }
+    50% { opacity: 0.3; width: 100%; }
+    100% { opacity: 0.1; width: 0; }
+  }
+  
+  /* Melhorando animações */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .floating {
+    animation: float 5s ease-in-out infinite;
+  }
+  
+  /* Glassmorphism para elementos de UI avançados */
+  .glass {
+    @apply bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+  }
 }

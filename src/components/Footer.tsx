@@ -11,13 +11,11 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start pb-16 border-b border-blue-900">
           <div className="mb-10 lg:mb-0">
             <div className="flex items-center mb-6">
-              <div className="h-10 w-10 bg-blue-800 flex items-center justify-center rounded-md mr-2">
-                <img 
-                  src="/lovable-uploads/61e09eab-7455-483f-aa3e-e6fee0f382f7.png"
-                  alt="Logo da Agência" 
-                  className="h-10" 
-                />
-              </div>
+              <img 
+                src="/lovable-uploads/61e09eab-7455-483f-aa3e-e6fee0f382f7.png"
+                alt="Logo da Agência" 
+                className="h-12 w-auto object-contain mr-2" 
+              />
               <h2 className="text-3xl font-bold">AGÊNCIA</h2>
             </div>
             <p className="text-blue-300 max-w-md">
@@ -39,10 +37,10 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Serviços</h3>
               <ul className="space-y-3">
-                <li><a href="#" className="text-blue-300 hover:text-white transition-colors">Tráfego Pago</a></li>
-                <li><a href="#" className="text-blue-300 hover:text-white transition-colors">Criativos</a></li>
-                <li><a href="#" className="text-blue-300 hover:text-white transition-colors">Automações</a></li>
-                <li><a href="#" className="text-blue-300 hover:text-white transition-colors">Websites</a></li>
+                <li><a href="#services" className="text-blue-300 hover:text-white transition-colors">Tráfego Pago</a></li>
+                <li><a href="#services" className="text-blue-300 hover:text-white transition-colors">Criativos</a></li>
+                <li><a href="#services" className="text-blue-300 hover:text-white transition-colors">Automações</a></li>
+                <li><a href="#services" className="text-blue-300 hover:text-white transition-colors">Websites</a></li>
               </ul>
             </div>
             <div>

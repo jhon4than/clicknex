@@ -39,7 +39,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center pt-32 pb-20">
+    <section className="min-h-screen flex items-center pt-32 pb-20 bg-gradient-to-b from-white to-blue-50">
       <div className="container-custom">
         <div className="max-w-6xl">
           <div className="overflow-hidden">
@@ -60,18 +60,23 @@ const Hero = () => {
           
           <div className="overflow-hidden">
             <p className="text-xl md:text-2xl max-w-2xl mb-10 animate-fade-up opacity-0" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-              Desenvolvemos estratégias de marketing digital que conectam marcas com seu público-alvo e geram crescimento real para o seu negócio.
+              Desenvolvemos estratégias avançadas de marketing digital e tráfego pago que conectam marcas com seu público-alvo e impulsionam seu crescimento.
             </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up opacity-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
-            <Button className="bg-blue-900 text-white hover:bg-blue-800 text-lg py-6 px-8">
+            <Button className="bg-blue-900 text-white hover:bg-blue-800 text-lg py-6 px-8 group">
               Nosso Trabalho
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="outline" className="text-lg py-6 px-8 border-blue-900 text-blue-900 hover:bg-blue-50">
               Sobre Nós
             </Button>
+          </div>
+          
+          {/* Elemento gráfico tecnológico */}
+          <div className="absolute right-0 bottom-0 w-1/2 h-1/2 opacity-10 pointer-events-none hidden lg:block">
+            <div className="w-full h-full bg-gradient-to-tr from-blue-700 via-blue-500 to-transparent rounded-full blur-3xl"></div>
           </div>
         </div>
       </div>

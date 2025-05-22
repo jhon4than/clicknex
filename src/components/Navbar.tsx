@@ -34,14 +34,12 @@ const Navbar = () => {
     >
       <div className="container-custom flex items-center justify-between">
         <a href="#" className="flex items-center">
-          <div className="h-12 w-12 bg-blue-900 flex items-center justify-center rounded-md mr-2">
-            <img 
-              src="/lovable-uploads/61e09eab-7455-483f-aa3e-e6fee0f382f7.png"
-              alt="Logo da Agência" 
-              className="h-12" 
-            />
-          </div>
-          <span className="text-2xl font-extrabold">AGÊNCIA</span>
+          <img 
+            src="/lovable-uploads/61e09eab-7455-483f-aa3e-e6fee0f382f7.png"
+            alt="Logo da Agência" 
+            className="h-12 w-auto object-contain" 
+          />
+          <span className="text-2xl font-extrabold ml-2 text-blue-900">AGÊNCIA</span>
         </a>
         
         <div className="hidden md:flex items-center space-x-8">
