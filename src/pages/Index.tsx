@@ -9,6 +9,8 @@ import Team from '../components/Team';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import Partners from '../components/Partners';
+import Stats from '../components/Stats';
 
 const Index = () => {
   useEffect(() => {
@@ -39,7 +41,9 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      <Partners />
       <Services />
+      <Stats />
       <Work />
       <Testimonials />
       <About />

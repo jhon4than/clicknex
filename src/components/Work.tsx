@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ExternalLink } from 'lucide-react';
+import { ArrowRight, ExternalLink, ChevronRight } from 'lucide-react';
 
 // Sample projects data
 const projects = [
@@ -35,6 +35,27 @@ const projects = [
   }
 ];
 
+// Adding more project data to fill in empty space
+const additionalProjects = [
+  {
+    id: 5,
+    title: "SaaS de Gestão Financeira",
+    category: "Tráfego Pago",
+    imageUrl: "https://images.unsplash.com/photo-1593510987185-1ec2256148f3?q=80&w=1000",
+    description: "Campanha de aquisição de usuários para plataforma SaaS com CPA 40% abaixo do benchmark."
+  },
+  {
+    id: 6,
+    title: "Clínica Médica Especializada",
+    category: "Marketing Digital",
+    imageUrl: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=1000",
+    description: "Estratégia completa de presença digital aumentando agendamentos em 180% em 6 meses."
+  }
+];
+
+// Combining all projects
+const allProjects = [...projects, ...additionalProjects];
+
 const Work = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [activeFilter, setActiveFilter] = useState<string>("all");
@@ -43,8 +64,8 @@ const Work = () => {
   const filters = ["all", "Tráfego Pago", "Marketing Digital", "Criação de Site", "Produto Validado"];
   
   const filteredProjects = activeFilter === "all" 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
+    ? allProjects 
+    : allProjects.filter(project => project.category === activeFilter);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -104,7 +125,7 @@ const Work = () => {
           ))}
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
             <div 
               key={project.id}
@@ -143,6 +164,45 @@ const Work = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Call to Action - Preenchendo espaço vazio */}
+        <div className="mt-24 bg-gradient-to-r from-blue-900 to-blue-800 rounded-2xl p-10 text-white reveal">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-3xl font-bold mb-4">Pronto para transformar seu negócio digital?</h3>
+              <p className="text-blue-100 mb-6">
+                Descubra como nossa abordagem estratégica pode ajudar sua empresa a atingir novos patamares de sucesso digital.
+              </p>
+              <Button variant="outline" className="text-white border-white hover:bg-white hover:text-blue-900 group">
+                Agende uma Consulta Gratuita
+                <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
+            <div className="hidden md:block">
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 relative">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-blue-500/30 rounded-full filter blur-xl"></div>
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                    <p>Análise completa do seu negócio</p>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                    <p>Estratégia personalizada</p>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                    <p>Implementação por especialistas</p>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                    <p>Resultados mensuráveis</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
