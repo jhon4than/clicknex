@@ -14,24 +14,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 7%;
 
-    --primary: 0 0% 7%;
+    --primary: 213 100% 21%; /* Azul escuro - #002B73 */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 240 5.9% 96%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 213 100% 16%; /* Azul mais escuro - #002159 */
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 213 30% 95%;
+    --muted-foreground: 213 20% 40%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 213 80% 40%; /* Azul médio - #0053DE */
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
+    --border: 213 10% 90%;
+    --input: 213 10% 90%;
+    --ring: 213 80% 40%;
 
     --radius: 0.5rem;
   }
@@ -65,10 +65,14 @@
   }
   
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-neutral-800 to-neutral-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-950 to-blue-700;
   }
   
   .text-gradient-hover {
-    @apply transition-all duration-300 bg-clip-text text-transparent bg-gradient-to-r from-neutral-800 to-neutral-500 hover:from-neutral-500 hover:to-neutral-800;
+    @apply transition-all duration-300 bg-clip-text text-transparent bg-gradient-to-r from-blue-950 to-blue-700 hover:from-blue-700 hover:to-blue-950;
+  }
+
+  .bg-primary-gradient {
+    @apply bg-gradient-to-r from-blue-950 to-blue-800;
   }
 }

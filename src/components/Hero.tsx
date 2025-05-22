@@ -43,8 +43,8 @@ const Hero = () => {
       <div className="container-custom">
         <div className="max-w-6xl">
           <div className="overflow-hidden">
-            <p className="text-lg md:text-xl font-medium mb-6 animate-fade-up opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-              A CREATIVE DIGITAL AGENCY
+            <p className="text-lg md:text-xl font-medium mb-6 animate-fade-up opacity-0 text-blue-800" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
+              AGÊNCIA ESPECIALIZADA EM MARKETING DIGITAL
             </p>
           </div>
           
@@ -54,23 +54,23 @@ const Hero = () => {
               className="heading-xl text-gradient animate-fade-up opacity-0 transition-all duration-300 ease-out"
               style={{ animationDelay: '0.4s', animationFillMode: 'forwards', transformStyle: 'preserve-3d' }}
             >
-              WE CREATE<br />DIGITAL<br />EXPERIENCES
+              TRANSFORMAMOS<br />IDEIAS EM<br />RESULTADOS
             </h1>
           </div>
           
           <div className="overflow-hidden">
             <p className="text-xl md:text-2xl max-w-2xl mb-10 animate-fade-up opacity-0" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-              We build innovative digital products and experiences that connect brands with their customers.
+              Desenvolvemos estratégias de marketing digital que conectam marcas com seu público-alvo e geram crescimento real para o seu negócio.
             </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up opacity-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
-            <Button className="bg-black text-white hover:bg-neutral-800 text-lg py-6 px-8">
-              View Our Work
+            <Button className="bg-blue-900 text-white hover:bg-blue-800 text-lg py-6 px-8">
+              Nosso Trabalho
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" className="text-lg py-6 px-8">
-              About Us
+            <Button variant="outline" className="text-lg py-6 px-8 border-blue-900 text-blue-900 hover:bg-blue-50">
+              Sobre Nós
             </Button>
           </div>
         </div>

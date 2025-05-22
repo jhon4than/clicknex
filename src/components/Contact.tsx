@@ -13,62 +13,62 @@ const Contact = () => {
     
     // Here you would normally handle the form submission
     toast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
+      title: "Mensagem enviada!",
+      description: "Entraremos em contato o mais breve possível.",
     });
   };
   
   return (
-    <section id="contact" className="py-24 bg-neutral-100">
+    <section id="contact" className="py-24 bg-blue-50">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-neutral-500 font-medium mb-3">GET IN TOUCH</p>
-            <h2 className="heading-lg mb-6">Let's Start a Project Together</h2>
-            <p className="text-xl text-neutral-600">
-              Have a project in mind? We'd love to hear about it. Tell us what you're looking for and we'll get back to you.
+            <p className="text-blue-700 font-medium mb-3">ENTRE EM CONTATO</p>
+            <h2 className="heading-lg mb-6">Vamos Começar um Projeto Juntos</h2>
+            <p className="text-xl text-blue-900/70">
+              Tem um projeto em mente? Adoraríamos ouvir sobre ele. Conte-nos o que você está procurando e entraremos em contato.
             </p>
           </div>
           
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-3">
-                <label htmlFor="name" className="font-medium">Name</label>
-                <Input id="name" placeholder="Your name" required />
+                <label htmlFor="name" className="font-medium">Nome</label>
+                <Input id="name" placeholder="Seu nome" required />
               </div>
               <div className="space-y-3">
                 <label htmlFor="email" className="font-medium">Email</label>
-                <Input id="email" type="email" placeholder="Your email" required />
+                <Input id="email" type="email" placeholder="Seu email" required />
               </div>
             </div>
             
             <div className="space-y-3">
-              <label htmlFor="subject" className="font-medium">Subject</label>
-              <Input id="subject" placeholder="Project inquiry" required />
+              <label htmlFor="subject" className="font-medium">Assunto</label>
+              <Input id="subject" placeholder="Consulta de projeto" required />
             </div>
             
             <div className="space-y-3">
-              <label htmlFor="message" className="font-medium">Message</label>
-              <Textarea id="message" placeholder="Tell us about your project" rows={6} required />
+              <label htmlFor="message" className="font-medium">Mensagem</label>
+              <Textarea id="message" placeholder="Conte-nos sobre seu projeto" rows={6} required />
             </div>
             
-            <Button type="submit" className="w-full bg-black text-white hover:bg-neutral-800 py-6 text-lg">
-              Send Message
+            <Button type="submit" className="w-full bg-blue-900 text-white hover:bg-blue-800 py-6 text-lg">
+              Enviar Mensagem
             </Button>
           </form>
           
           <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
             <div>
               <h3 className="text-xl font-bold mb-3">Email</h3>
-              <p className="text-neutral-600">hello@nexusagency.com</p>
+              <p className="text-blue-900/70">contato@suaagencia.com.br</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-3">Call Us</h3>
-              <p className="text-neutral-600">+1 (555) 123-4567</p>
+              <h3 className="text-xl font-bold mb-3">Telefone</h3>
+              <p className="text-blue-900/70">(11) 99999-9999</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-3">Office</h3>
-              <p className="text-neutral-600">123 Creative St, Suite 100<br />San Francisco, CA 94103</p>
+              <h3 className="text-xl font-bold mb-3">Escritório</h3>
+              <p className="text-blue-900/70">Av. Paulista, 1000<br />São Paulo, SP, 01310-100</p>
             </div>
           </div>
         </div>

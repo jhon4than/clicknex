@@ -7,31 +7,31 @@ import { ArrowRight } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: "Neon Dreams",
-    category: "Brand Identity",
+    title: "Campanha Digital Imobiliária",
+    category: "Tráfego Pago",
     imageUrl: "https://images.unsplash.com/photo-1535350356005-fd52b3b524fb?q=80&w=1000",
-    description: "Vibrant brand identity for a nightlife startup."
+    description: "Estratégia de anúncios para empresa do setor imobiliário com ROI de 300%."
   },
   {
     id: 2,
-    title: "Serene Spaces",
-    category: "Web Design",
+    title: "E-commerce de Moda",
+    category: "Marketing Digital",
     imageUrl: "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=1000",
-    description: "Minimal website for an interior design studio."
+    description: "Automação de marketing e tráfego para loja online de moda sustentável."
   },
   {
     id: 3,
-    title: "Urban Pulse",
-    category: "Digital Campaign",
+    title: "B2B Tech Solutions",
+    category: "Criação de Site",
     imageUrl: "https://images.unsplash.com/photo-1579762593175-20226054cad0?q=80&w=1000",
-    description: "Citywide digital marketing campaign for urban fashion brand."
+    description: "Site institucional e estratégia de geração de leads para empresa de tecnologia."
   },
   {
     id: 4,
-    title: "Eco Alliance",
-    category: "Branding & Web",
+    title: "Nutrição Especializada",
+    category: "Produto Validado",
     imageUrl: "https://images.unsplash.com/photo-1571292098320-997aa03a5d19?q=80&w=1000",
-    description: "Complete rebrand and website for environmental nonprofit."
+    description: "Desenvolvimento e validação de produto digital para clínica de nutrição."
   }
 ];
 
@@ -43,14 +43,14 @@ const Work = () => {
       <div className="container-custom">
         <div className="flex flex-col lg:flex-row justify-between items-start mb-16">
           <div>
-            <p className="text-neutral-500 font-medium mb-3">OUR PORTFOLIO</p>
-            <h2 className="heading-lg mb-6">Selected Work</h2>
-            <p className="text-xl text-neutral-600 max-w-xl">
-              We've worked with brands from various industries to create memorable digital experiences.
+            <p className="text-blue-700 font-medium mb-3">NOSSO PORTFÓLIO</p>
+            <h2 className="heading-lg mb-6">Projetos Selecionados</h2>
+            <p className="text-xl text-blue-900/70 max-w-xl">
+              Trabalhamos com marcas de diversos setores para criar estratégias digitais que trazem resultados reais e mensuráveis.
             </p>
           </div>
-          <Button className="mt-8 lg:mt-0 bg-black text-white hover:bg-neutral-800">
-            View All Projects
+          <Button className="mt-8 lg:mt-0 bg-blue-900 text-white hover:bg-blue-800">
+            Ver Todos os Projetos
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
@@ -74,18 +74,18 @@ const Work = () => {
                   }`}
                 />
               </div>
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-blue-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div className="text-center p-6">
-                  <p className="text-neutral-300 mb-2">{project.category}</p>
+                  <p className="text-blue-200 mb-2">{project.category}</p>
                   <h3 className="text-white text-2xl font-bold mb-3">{project.title}</h3>
-                  <p className="text-neutral-200 mb-6">{project.description}</p>
-                  <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">
-                    View Project
+                  <p className="text-blue-100 mb-6">{project.description}</p>
+                  <Button variant="outline" className="text-white border-white hover:bg-white hover:text-blue-900">
+                    Ver Projeto
                   </Button>
                 </div>
               </div>
               <div className="mt-4">
-                <p className="text-neutral-500">{project.category}</p>
+                <p className="text-blue-700">{project.category}</p>
                 <h3 className="text-xl font-bold">{project.title}</h3>
               </div>
             </div>
