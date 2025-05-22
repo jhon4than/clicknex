@@ -1,7 +1,7 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 
 // Sample projects data
 const projects = [
@@ -37,6 +37,34 @@ const projects = [
 
 const Work = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
+  const [activeFilter, setActiveFilter] = useState<string>("all");
+  const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
+  
+  const filters = ["all", "Tráfego Pago", "Marketing Digital", "Criação de Site", "Produto Validado"];
+  
+  const filteredProjects = activeFilter === "all" 
+    ? projects 
+    : projects.filter(project => project.category === activeFilter);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    projectRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+    
+    return () => {
+      projectRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, [filteredProjects]);
   
   return (
     <section id="work" className="py-24 relative">
@@ -46,30 +74,47 @@ const Work = () => {
       
       <div className="container-custom relative z-10">
         <div className="flex flex-col lg:flex-row justify-between items-start mb-16">
-          <div>
+          <div className="reveal">
             <p className="text-blue-700 font-medium mb-3">NOSSO PORTFÓLIO</p>
             <h2 className="heading-lg mb-6">Projetos que Geram Resultados</h2>
             <p className="text-xl text-blue-900/70 max-w-xl">
               Trabalhamos com marcas de diversos setores para criar estratégias digitais que trazem resultados reais, mensuráveis e escaláveis.
             </p>
           </div>
-          <Button className="mt-8 lg:mt-0 bg-blue-900 text-white hover:bg-blue-800 group">
+          <Button className="mt-8 lg:mt-0 bg-blue-900 text-white hover:bg-blue-800 group reveal" style={{ transitionDelay: '0.2s' }}>
             Ver Todos os Projetos
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
         
+        {/* Filtro de categorias */}
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-12 reveal" style={{ transitionDelay: '0.3s' }}>
+          {filters.map((filter, index) => (
+            <button 
+              key={index}
+              onClick={() => setActiveFilter(filter)}
+              className={`px-5 py-2 rounded-full transition-all duration-300 ${
+                activeFilter === filter 
+                  ? 'bg-blue-900 text-white' 
+                  : 'bg-blue-50 text-blue-900 hover:bg-blue-100'
+              }`}
+            >
+              {filter === 'all' ? 'Todos' : filter}
+            </button>
+          ))}
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
+          {filteredProjects.map((project, index) => (
             <div 
               key={project.id}
-              className="group relative overflow-hidden rounded-xl shadow-lg"
+              ref={(el) => projectRefs.current[index] = el}
+              className="group relative overflow-hidden rounded-xl shadow-lg reveal"
+              style={{ transitionDelay: `${index * 0.1 + 0.4}s`, opacity: 0, transform: 'translateY(20px)' }}
               onMouseEnter={() => setHoveredId(project.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
-              <div 
-                className="aspect-[4/3] w-full overflow-hidden"
-              >
+              <div className="aspect-[4/3] w-full overflow-hidden">
                 <img 
                   src={project.imageUrl}
                   alt={project.title}
@@ -79,18 +124,22 @@ const Work = () => {
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-blue-950/95 via-blue-900/90 to-blue-900/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="text-center p-6">
+                <div className="text-center p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   <p className="text-blue-300 mb-2 font-medium tracking-wide">{project.category}</p>
                   <h3 className="text-white text-2xl font-bold mb-3">{project.title}</h3>
                   <p className="text-blue-100 mb-6">{project.description}</p>
-                  <Button variant="outline" className="text-white border-white hover:bg-white hover:text-blue-900">
+                  <Button variant="outline" className="text-white border-white hover:bg-white hover:text-blue-900 group">
                     Ver Projeto
+                    <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-y-[-2px] group-hover:translate-x-[2px] transition-transform" />
                   </Button>
                 </div>
               </div>
-              <div className="bg-white p-4 rounded-b-xl">
-                <p className="text-blue-700 font-medium">{project.category}</p>
-                <h3 className="text-xl font-bold text-blue-900">{project.title}</h3>
+              <div className="bg-white p-4 rounded-b-xl relative z-10">
+                <div className="absolute left-0 top-0 w-1 h-full bg-blue-700 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-bottom"></div>
+                <div className="pl-3">
+                  <p className="text-blue-700 font-medium">{project.category}</p>
+                  <h3 className="text-xl font-bold text-blue-900">{project.title}</h3>
+                </div>
               </div>
             </div>
           ))}

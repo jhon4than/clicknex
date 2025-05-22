@@ -88,6 +88,59 @@
     animation: fadeInOut 8s infinite alternate;
   }
   
+  /* Efeito de brilho nas bordas */
+  .glow-border {
+    @apply relative rounded-xl overflow-hidden;
+  }
+  
+  .glow-border::before {
+    content: '';
+    @apply absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl opacity-0 transition-opacity duration-300;
+    filter: blur(5px);
+  }
+  
+  .glow-border:hover::before {
+    @apply opacity-60;
+  }
+  
+  /* Efeito de partículas */
+  .particles-container {
+    @apply absolute inset-0 overflow-hidden pointer-events-none z-0;
+  }
+  
+  .particle {
+    @apply absolute w-1.5 h-1.5 rounded-full;
+    background: radial-gradient(circle, rgba(0,83,222,0.8) 0%, rgba(0,43,115,0) 70%);
+    animation: float-particle 15s infinite linear;
+    opacity: 0;
+  }
+  
+  @keyframes float-particle {
+    0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.2; }
+    100% { transform: translate(var(--move-x), var(--move-y)) rotate(360deg); opacity: 0; }
+  }
+  
+  /* Efeito de parallax */
+  .parallax {
+    @apply transition-transform duration-500 ease-out;
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  .parallax-slow {
+    transform: translateZ(-10px) scale(2);
+  }
+  
+  .parallax-medium {
+    transform: translateZ(-5px) scale(1.5);
+  }
+  
+  .parallax-fast {
+    transform: translateZ(-1px) scale(1.1);
+  }
+
   @keyframes pulse {
     0% { opacity: 0.3; }
     100% { opacity: 1; }
@@ -110,10 +163,45 @@
     animation: float 5s ease-in-out infinite;
   }
   
+  /* Efeito de rolagem suave */
+  html {
+    @apply scroll-smooth;
+  }
+  
+  /* Cards com efeito de profundidade */
+  .card-hover {
+    @apply transition-all duration-300 hover:translate-y-[-5px] hover:shadow-xl;
+  }
+  
+  /* Efeito de destaque em hover */
+  .highlight-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .highlight-hover:hover {
+    @apply bg-blue-50;
+    box-shadow: 0 0 0 2px rgba(0, 83, 222, 0.3);
+  }
+  
   /* Glassmorphism para elementos de UI avançados */
   .glass {
     @apply bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg;
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+  .glass-dark {
+    @apply bg-blue-950 bg-opacity-30 backdrop-filter backdrop-blur-md;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animações ao entrar na view */
+  .reveal {
+    @apply opacity-0 translate-y-10 transition-all duration-700;
+  }
+  
+  .reveal-visible {
+    @apply opacity-100 translate-y-0;
   }
 }
