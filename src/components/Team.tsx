@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
+import { ArrowRight } from 'lucide-react';
 
 const team = [
   {
