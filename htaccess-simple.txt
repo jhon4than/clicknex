@@ -1,0 +1,11 @@
+# Versão simplificada do .htaccess para Hostinger
+# Copie e cole este conteúdo diretamente no cPanel
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+</IfModule>
