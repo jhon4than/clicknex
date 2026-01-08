@@ -36,7 +36,7 @@ const Team = () => {
       <div className="container-custom">
         <div className="text-center mb-16">
           <p className="text-blue-700 font-medium mb-3">CONHEÇA NOSSA EQUIPE</p>
-          <h2 className="heading-lg mb-6">Os Talentos Por Trás de Nossa Agência</h2>
+          <h2 className="heading-lg mb-6">AAAAAAAAA Os Talentos Por Trás de Nossa Agência</h2>
           <p className="text-xl text-blue-900/70 max-w-2xl mx-auto">
             Nossa equipe diversificada reúne expertise em design, tecnologia e marketing para criar trabalhos excepcionais que geram resultados.
           </p>
