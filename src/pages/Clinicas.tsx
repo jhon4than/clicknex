@@ -116,7 +116,7 @@ const Clinicas = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = `Olá! Gostaria de solicitar um diagnóstico gratuito.%0A%0A*Nome:* ${formData.nome}%0A*E-mail:* ${formData.email}%0A*Telefone:* ${formData.telefone}%0A*Clínica:* ${formData.clinica}%0A*Especialidade:* ${formData.especialidade}${formData.mensagem ? `%0A*Mensagem:* ${formData.mensagem}` : ''}`;
-    window.open(`https://wa.me/5535999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5535999757076?text=${message}`, '_blank');
     toast({
       title: "Redirecionando para o WhatsApp!",
       description: "Você será atendido em instantes.",
@@ -379,7 +379,7 @@ const Clinicas = () => {
                 onSubmit={(e) => {
                   e.preventDefault();
                   const message = `Olá! Gostaria de solicitar um diagnóstico gratuito.%0A%0A*Nome:* ${whatsappFormData.nome}%0A*E-mail:* ${whatsappFormData.email}%0A*Telefone:* ${whatsappFormData.telefone}%0A*Clínica:* ${whatsappFormData.clinica}%0A*Especialidade:* ${whatsappFormData.especialidade}`;
-                  window.open(`https://wa.me/5535999999999?text=${message}`, '_blank');
+                  window.open(`https://wa.me/5535999757076?text=${message}`, '_blank');
                   setWhatsappModalOpen(false);
                   setWhatsappFormData({ nome: '', email: '', telefone: '', clinica: '', especialidade: '' });
                   toast({
@@ -1025,7 +1025,7 @@ const Clinicas = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900 text-sm sm:text-base">Telefone / WhatsApp</p>
-                    <p className="text-gray-600 text-sm sm:text-base">(35) 99999-9999</p>
+                    <p className="text-gray-600 text-sm sm:text-base">+55 (35) 99975-7076</p>
                   </div>
                 </div>
                 

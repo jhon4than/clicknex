@@ -21,6 +21,9 @@ const Footer = () => {
             <p className="text-blue-300 max-w-md">
               Criando estratégias digitais inovadoras que conectam marcas com seu público e geram resultados reais.
             </p>
+            <p className="text-blue-300 mt-4">
+              <a href="tel:+5535999757076" className="hover:text-white transition-colors">+55 (35) 99975-7076</a>
+            </p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
