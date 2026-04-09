@@ -7,6 +7,7 @@ export interface SitemapRoute {
 
 export const staticRoutes: SitemapRoute[] = [
   { path: '/', changefreq: 'weekly', priority: 1.0 },
+  { path: '/agencia', changefreq: 'weekly', priority: 0.9 },
   { path: '/sobre', changefreq: 'monthly', priority: 0.8 },
   { path: '/servicos', changefreq: 'weekly', priority: 0.9 },
   { path: '/servicos/trafego-pago', changefreq: 'monthly', priority: 0.8 },
@@ -15,7 +16,6 @@ export const staticRoutes: SitemapRoute[] = [
   { path: '/servicos/criacao-de-sites', changefreq: 'monthly', priority: 0.8 },
   { path: '/servicos/seo', changefreq: 'monthly', priority: 0.8 },
   { path: '/servicos/automacao-de-marketing', changefreq: 'monthly', priority: 0.8 },
-  { path: '/nichos/clinicas', changefreq: 'weekly', priority: 0.9 },
   { path: '/nichos/dentistas', changefreq: 'weekly', priority: 0.9 },
   { path: '/nichos/medicos', changefreq: 'weekly', priority: 0.9 },
   { path: '/nichos/esteticas', changefreq: 'weekly', priority: 0.9 },

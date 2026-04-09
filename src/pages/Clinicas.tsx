@@ -242,13 +242,12 @@ const Clinicas = () => {
           serviceLd({
             name: 'Marketing Digital para Clínicas Médicas',
             description: 'Estratégias completas de marketing digital para clínicas médicas: tráfego pago, criação de sites, automações e sistema de agendamentos com conformidade CFM/ANVISA.',
-            url: `${SITE_URL}/nichos/clinicas`,
+            url: `${SITE_URL}/`,
           }),
           faqPageLd(clinicasFaqs),
           breadcrumbLd([
             { name: 'Home', url: `${SITE_URL}/` },
-            { name: 'Nichos', url: `${SITE_URL}/nichos/clinicas` },
-            { name: 'Clínicas Médicas', url: `${SITE_URL}/nichos/clinicas` },
+            { name: 'Clínicas Médicas', url: `${SITE_URL}/` },
           ]),
         ]}
       />

@@ -55,11 +55,14 @@ const App = () => (
       <BrowserRouter>
         <Suspense fallback={<Spinner />}>
           <Routes>
-            {/* Home — agência */}
-            <Route path="/" element={<Index />} />
+            {/* Home — clínicas (página principal) */}
+            <Route path="/" element={<Clinicas />} />
 
-            {/* Redirect legado */}
-            <Route path="/clinicas" element={<Navigate to="/nichos/clinicas" replace />} />
+            {/* Agência institucional */}
+            <Route path="/agencia" element={<Index />} />
+
+            {/* Redirects legados */}
+            <Route path="/clinicas" element={<Navigate to="/" replace />} />
 
             {/* Institucional */}
             <Route path="/sobre" element={<Sobre />} />
@@ -77,7 +80,7 @@ const App = () => (
             <Route path="/servicos/automacao-de-marketing" element={<Automacao />} />
 
             {/* Nichos */}
-            <Route path="/nichos/clinicas" element={<Clinicas />} />
+            <Route path="/nichos/clinicas" element={<Navigate to="/" replace />} />
             <Route path="/nichos/dentistas" element={<Dentistas />} />
             <Route path="/nichos/medicos" element={<Medicos />} />
             <Route path="/nichos/esteticas" element={<Esteticas />} />
