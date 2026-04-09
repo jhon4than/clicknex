@@ -1,38 +1,134 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agência de Marketing Digital | Tráfego Pago | Sites | Automação</title>
-    <meta name="description" content="Agência especializada em marketing digital, tráfego pago, criação de sites e automações para impulsionar seu negócio." />
-    <meta name="author" content="Agência de Marketing Digital" />
 
-    <meta property="og:title" content="Agência de Marketing Digital | Especialistas em Tráfego Pago" />
-    <meta property="og:description" content="Estratégias de marketing digital e tráfego pago que geram resultados reais para o seu negócio" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@agencia_marketing" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" href="/lovable-uploads/61e09eab-7455-483f-aa3e-e6fee0f382f7.png" type="image/png">
-    
-    <!-- Adicionando meta tags para melhorar SEO e aparência profissional -->
-    <meta name="keywords" content="marketing digital, tráfego pago, google ads, meta ads, sites responsivos, automação, agência de marketing" />
+    <!-- SEO primário (sobrescrito por <Seo> em cada rota) -->
+    <title>ClickNex | Agência de Marketing Digital em Lavras-MG</title>
+    <meta name="description" content="ClickNex — agência de marketing digital especializada em tráfego pago, criação de sites e automações. Mais agendamentos, mais clientes, mais resultados." />
+    <meta name="keywords" content="marketing digital, tráfego pago, google ads, meta ads, sites responsivos, automação, agência de marketing, lavras mg" />
+    <meta name="author" content="ClickNex" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
     <meta name="theme-color" content="#002B73" />
+    <link rel="canonical" href="https://clicknex.com.br/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ClickNex | Agência de Marketing Digital" />
+    <meta property="og:description" content="Estratégias de marketing digital e tráfego pago que geram resultados reais para o seu negócio." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://clicknex.com.br/" />
+    <meta property="og:image" content="https://clicknex.com.br/og/clicknex-default.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="ClickNex — Agência de Marketing Digital" />
+    <meta property="og:site_name" content="ClickNex" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ClickNex | Agência de Marketing Digital" />
+    <meta name="twitter:description" content="Estratégias de marketing digital e tráfego pago que geram resultados reais para o seu negócio." />
+    <meta name="twitter:image" content="https://clicknex.com.br/og/clicknex-default.jpg" />
+    <meta name="twitter:site" content="@clicknex" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="/lovable-uploads/61e09eab-7455-483f-aa3e-e6fee0f382f7.png" type="image/png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/lovable-uploads/61e09eab-7455-483f-aa3e-e6fee0f382f7.png" />
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- JSON-LD base (Organization + WebSite) — renderizado antes do JS para crawlers -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://clicknex.com.br/#organization",
+      "name": "ClickNex",
+      "legalName": "BERTINI E MEIRELES SERVIÇOS LTDA",
+      "taxID": "61.754.617/0001-97",
+      "url": "https://clicknex.com.br",
+      "logo": { "@type": "ImageObject", "url": "https://clicknex.com.br/og/clicknex-default.jpg" },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+5535999757076",
+        "email": "comercial@clicknex.com.br",
+        "contactType": "customer service"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. Comandante Nelio, 299",
+        "addressLocality": "Lavras",
+        "addressRegion": "MG",
+        "postalCode": "37206-656",
+        "addressCountry": "BR"
+      },
+      "sameAs": [
+        "https://www.instagram.com/clicknex",
+        "https://www.facebook.com/clicknex",
+        "https://www.linkedin.com/company/clicknex"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://clicknex.com.br/#website",
+      "name": "ClickNex",
+      "url": "https://clicknex.com.br",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://clicknex.com.br/#organization" }
+    }
+    </script>
+
+    <!-- Google Tag Manager (substitua GTM-XXXXXX pelo ID real) -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXX');</script>
+
+    <!-- Google Analytics 4 (substitua G-XXXXXXXXXX pelo ID real) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Meta Pixel (substitua XXXXXXXXXXXXXXX pelo ID real) -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'XXXXXXXXXXXXXXX');
+      fbq('track', 'PageView');
+    </script>
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Meta Pixel noscript -->
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+
     <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

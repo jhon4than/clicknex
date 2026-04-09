@@ -1,4 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
+import Seo from '../components/seo/Seo';
+import { organizationLd, localBusinessLd, serviceLd, faqPageLd, breadcrumbLd } from '../lib/seo/jsonLd';
+import { SITE_URL } from '../components/seo/siteConfig';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -219,8 +222,37 @@ const Clinicas = () => {
     "Outra"
   ];
 
+  const clinicasFaqs = [
+    { q: 'Como a ClickNex ajuda minha clínica a conseguir mais pacientes?', a: 'Criamos campanhas de tráfego pago no Google Ads e Meta Ads direcionadas para pessoas que buscam ativamente pelos serviços da sua clínica, combinadas com landing pages otimizadas para conversão.' },
+    { q: 'A ClickNex trabalha com marketing médico dentro das normas do CFM e ANVISA?', a: 'Sim. Todas as nossas estratégias para clínicas seguem rigorosamente as diretrizes do CFM e ANVISA, garantindo uma comunicação ética e eficaz.' },
+    { q: 'Quanto tempo leva para ver resultados?', a: 'As primeiras conversões aparecem em média entre 7 e 21 dias após o início das campanhas. Resultados consolidados com ROI mensurável costumam se solidificar entre 60 e 90 dias.' },
+    { q: 'O sistema de agendamentos é integrado com o meu software de gestão?', a: 'Desenvolvemos integrações customizadas com os principais softwares de gestão de clínicas. O sistema também funciona de forma independente com confirmações automáticas via WhatsApp e SMS.' },
+    { q: 'Qual é o investimento mínimo para começar?', a: 'Trabalhamos com planos a partir de R$1.500/mês. Solicite um diagnóstico gratuito para receber uma proposta personalizada para o seu tipo de clínica.' },
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <Seo
+        title="Marketing Digital para Clínicas Médicas | Aumente seus Agendamentos em 340%"
+        description="ClickNex especialista em marketing para clínicas médicas e consultórios. Tráfego pago ético (CFM/ANVISA), sistema de agendamentos e automações. Diagnóstico gratuito."
+        keywords={['marketing para clínicas', 'tráfego pago clínicas médicas', 'google ads médico', 'marketing médico cfm', 'aumentar agendamentos clínica', 'sistema agendamento médico']}
+        jsonLd={[
+          organizationLd(),
+          localBusinessLd(),
+          serviceLd({
+            name: 'Marketing Digital para Clínicas Médicas',
+            description: 'Estratégias completas de marketing digital para clínicas médicas: tráfego pago, criação de sites, automações e sistema de agendamentos com conformidade CFM/ANVISA.',
+            url: `${SITE_URL}/nichos/clinicas`,
+          }),
+          faqPageLd(clinicasFaqs),
+          breadcrumbLd([
+            { name: 'Home', url: `${SITE_URL}/` },
+            { name: 'Nichos', url: `${SITE_URL}/nichos/clinicas` },
+            { name: 'Clínicas Médicas', url: `${SITE_URL}/nichos/clinicas` },
+          ]),
+        ]}
+      />
+      <div className="min-h-screen bg-white">
       <style>{`
         @keyframes float-particle {
           0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
@@ -1223,6 +1255,7 @@ const Clinicas = () => {
         </div>
       </footer>
     </div>
+    </>
   );
 };
 

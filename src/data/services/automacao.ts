@@ -1,0 +1,54 @@
+import type { ServiceConfig } from './types';
+
+const automacao: ServiceConfig = {
+  slug: 'automacao-de-marketing',
+  seo: {
+    title: 'Automação de Marketing | Nutrição de Leads e CRM para Empresas',
+    description: 'Automação de marketing que nutre leads, reduz no-show e aumenta conversões no piloto automático. WhatsApp, e-mail e CRM integrados para o seu negócio.',
+    keywords: ['automação de marketing', 'crm', 'nutrição de leads', 'email marketing', 'automação whatsapp', 'rdstation'],
+  },
+  hero: {
+    eyebrow: 'Automação de Marketing',
+    h1: 'Converta Mais Leads com Menos Esforço no Piloto Automático',
+    subtitle: 'Implantamos fluxos automáticos de nutrição, follow-up e onboarding que trabalham 24/7 para converter leads em clientes — enquanto você foca no que importa.',
+    ctaLabel: 'Quero Automatizar Meu Marketing',
+  },
+  features: [
+    { icon: '⚡', titulo: 'Resposta Imediata ao Lead', desc: 'Mensagem automática em menos de 2 minutos para cada novo lead — aumentando a conversão em até 400%.' },
+    { icon: '🔄', titulo: 'Follow-up Automático', desc: 'Sequência de follow-up para leads que não respondem: WhatsApp, e-mail e notificação para o vendedor.' },
+    { icon: '📧', titulo: 'E-mail Marketing', desc: 'Fluxos de nutrição personalizados por estágio do funil, segmento e comportamento do lead.' },
+    { icon: '📅', titulo: 'Lembretes de Agendamento', desc: 'Confirmação + lembretes automáticos por WhatsApp e SMS. Reduz no-show em até 70%.' },
+    { icon: '🔗', titulo: 'Integração com CRM', desc: 'Conexão com HubSpot, RD Station, Kommo e outros CRMs para gestão centralizada de leads.' },
+    { icon: '📊', titulo: 'Relatórios de Funil', desc: 'Visualize onde cada lead está no funil e quais automações estão gerando mais conversões.' },
+  ],
+  process: [
+    { numero: '01', titulo: 'Mapeamento de Funil', desc: 'Mapeamos todos os pontos de contato com leads e clientes para identificar onde estão os gargalos.' },
+    { numero: '02', titulo: 'Definição de Fluxos', desc: 'Desenhamos os fluxos de automação: gatilhos, condições, mensagens e timing de cada etapa.' },
+    { numero: '03', titulo: 'Implementação', desc: 'Configuramos a ferramenta escolhida, criamos os conteúdos e conectamos com seus canais de captação.' },
+    { numero: '04', titulo: 'Monitoramento', desc: 'Acompanhamos taxas de abertura, conversão e ajustamos os fluxos com base nos dados.' },
+  ],
+  stats: [
+    { valor: '+60%', label: 'Aumento médio na taxa de conversão' },
+    { valor: '-70%', label: 'Redução de no-show com lembretes' },
+    { valor: '<2 min', label: 'Tempo de resposta ao lead' },
+    { valor: '24/7', label: 'Operação sem intervenção manual' },
+  ],
+  faqs: [
+    { q: 'Quais ferramentas vocês utilizam?', a: 'Trabalhamos com RD Station, HubSpot, ActiveCampaign, Kommo, Zenvia, Twilio e outras conforme a necessidade e orçamento do cliente.' },
+    { q: 'Preciso ter uma equipe de TI?', a: 'Não. Cuidamos de toda a parte técnica: integração, configuração e manutenção dos fluxos. Você só gerencia os leads que chegam.' },
+    { q: 'Automação de WhatsApp é permitida?', a: 'Sim, através da API oficial do WhatsApp Business (Meta). Garantimos conformidade total com os termos de uso para evitar bloqueio do número.' },
+    { q: 'Qual é o investimento?', a: 'O custo envolve a ferramenta (R$200-R$800/mês dependendo do volume) e a taxa de implantação e gestão da ClickNex. Solicite um orçamento personalizado.' },
+  ],
+  serviceSchema: {
+    name: 'Automação de Marketing',
+    description: 'Implantação de fluxos automáticos de nutrição de leads, follow-up, lembretes e onboarding de clientes via WhatsApp, e-mail e CRM.',
+    url: '/servicos/automacao-de-marketing',
+  },
+  breadcrumbs: [
+    { name: 'Home', url: '/' },
+    { name: 'Serviços', url: '/servicos' },
+    { name: 'Automação de Marketing', url: '/servicos/automacao-de-marketing' },
+  ],
+};
+
+export default automacao;
