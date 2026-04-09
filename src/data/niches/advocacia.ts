@@ -51,7 +51,6 @@ const advocacia: NicheConfig = {
   },
   breadcrumbs: [
     { name: 'Home', url: '/' },
-    { name: 'Nichos', url: '/nichos/clinicas' },
     { name: 'Advocacia', url: '/nichos/advocacia' },
   ],
 };

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Seo from '../components/seo/Seo';
 import { organizationLd, localBusinessLd, serviceLd, faqPageLd, breadcrumbLd } from '../lib/seo/jsonLd';
 import { SITE_URL } from '../components/seo/siteConfig';
@@ -1247,8 +1248,8 @@ const Clinicas = () => {
               © {new Date().getFullYear()} ClickNex - BERTINI E MEIRELES SERVIÇOS LTDA. Todos os direitos reservados.
             </p>
             <div className="flex space-x-4 sm:space-x-6">
-              <a href="#" className="text-blue-400 hover:text-white text-xs sm:text-sm transition-colors">Política de Privacidade</a>
-              <a href="#" className="text-blue-400 hover:text-white text-xs sm:text-sm transition-colors">Termos de Uso</a>
+              <Link to="/politica-de-privacidade" className="text-blue-400 hover:text-white text-xs sm:text-sm transition-colors">Política de Privacidade</Link>
+              <Link to="/termos-de-uso" className="text-blue-400 hover:text-white text-xs sm:text-sm transition-colors">Termos de Uso</Link>
             </div>
           </div>
         </div>

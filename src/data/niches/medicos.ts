@@ -51,7 +51,6 @@ const medicos: NicheConfig = {
   },
   breadcrumbs: [
     { name: 'Home', url: '/' },
-    { name: 'Nichos', url: '/nichos/clinicas' },
     { name: 'Médicos', url: '/nichos/medicos' },
   ],
 };

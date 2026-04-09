@@ -51,7 +51,6 @@ const ecommerce: NicheConfig = {
   },
   breadcrumbs: [
     { name: 'Home', url: '/' },
-    { name: 'Nichos', url: '/nichos/clinicas' },
     { name: 'E-commerce', url: '/nichos/ecommerce' },
   ],
 };

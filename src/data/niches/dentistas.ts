@@ -53,7 +53,6 @@ const dentistas: NicheConfig = {
   },
   breadcrumbs: [
     { name: 'Home', url: '/' },
-    { name: 'Nichos', url: '/nichos/clinicas' },
     { name: 'Dentistas', url: '/nichos/dentistas' },
   ],
 };

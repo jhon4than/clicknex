@@ -51,7 +51,6 @@ const imobiliarias: NicheConfig = {
   },
   breadcrumbs: [
     { name: 'Home', url: '/' },
-    { name: 'Nichos', url: '/nichos/clinicas' },
     { name: 'Imobiliárias', url: '/nichos/imobiliarias' },
   ],
 };

@@ -51,7 +51,6 @@ const esteticas: NicheConfig = {
   },
   breadcrumbs: [
     { name: 'Home', url: '/' },
-    { name: 'Nichos', url: '/nichos/clinicas' },
     { name: 'Estética', url: '/nichos/esteticas' },
   ],
 };
