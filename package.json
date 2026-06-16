@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "prebuild": "tsx scripts/generateSitemap.ts && chattr -i ./dist/.user.ini 2>/dev/null; rm -f ./dist/.user.ini || true",
-    "build": "vite build",
+    "build": "vite build && vite build --ssr src/entry-server.tsx --outDir dist/server && tsx scripts/prerender.ts",
+    "build:spa": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"

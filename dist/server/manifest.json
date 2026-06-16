@@ -1,0 +1,24 @@
+{
+  "name": "ClickNex",
+  "short_name": "ClickNex",
+  "description": "Agência de marketing digital especializada em tráfego pago, criação de sites e automações.",
+  "theme_color": "#002B73",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/lovable-uploads/61e09eab-7455-483f-aa3e-e6fee0f382f7.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/lovable-uploads/61e09eab-7455-483f-aa3e-e6fee0f382f7.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -19,6 +19,11 @@ export default defineConfig({
     }),
     react(),
   ],
+  // Bundla o react-helmet-async (CJS) no SSR para evitar erro de named export
+  // ('Helmet' não é exportado) ao importar o entry-server no prerender.
+  ssr: {
+    noExternal: ["react-helmet-async"],
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
