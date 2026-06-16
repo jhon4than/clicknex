@@ -3940,6 +3940,15 @@ const Contato = () => /* @__PURE__ */ jsxs(Fragment, { children: [
 ] });
 const blogPosts = [
   {
+    slug: "marketing-digital-para-clinicas-medicas",
+    titulo: "Marketing Digital para Clínicas Médicas: O Guia Completo (2026)",
+    resumo: "O guia definitivo de marketing para clínicas: SEO local, Google Ads, Meta Ads, conteúdo, automação e CRM — tudo dentro das normas do CFM e ANVISA.",
+    cover: "/og/clicknex-default.jpg",
+    tags: ["marketing para clínicas", "marketing médico", "guia"],
+    publishedAt: "2026-06-16",
+    readingTime: "11 min"
+  },
+  {
     slug: "como-atrair-mais-pacientes-para-clinica",
     titulo: "Como Atrair Mais Pacientes para sua Clínica em 2025",
     resumo: "Descubra as estratégias de marketing digital mais eficazes para aumentar o fluxo de pacientes na sua clínica médica ou consultório.",
@@ -4047,7 +4056,128 @@ const BlogIndex = () => /* @__PURE__ */ jsxs(Fragment, { children: [
     /* @__PURE__ */ jsx(Footer, {})
   ] })
 ] });
+function renderInline(s) {
+  return s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>").replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+}
+function renderMarkdown(md) {
+  const out = [];
+  let list = null;
+  const closeList = () => {
+    if (list) {
+      out.push(`</${list}>`);
+      list = null;
+    }
+  };
+  for (const raw of md.split("\n")) {
+    const line = raw.trim();
+    if (!line) {
+      closeList();
+      continue;
+    }
+    let m;
+    if (m = line.match(/^(#{2,6})\s+(.*)$/)) {
+      closeList();
+      const lvl = m[1].length;
+      out.push(`<h${lvl}>${renderInline(m[2])}</h${lvl}>`);
+    } else if (/^>\s?/.test(line)) {
+      closeList();
+      out.push(`<blockquote>${renderInline(line.replace(/^>\s?/, ""))}</blockquote>`);
+    } else if (m = line.match(/^[-*]\s+(.*)$/)) {
+      if (list !== "ul") {
+        closeList();
+        out.push("<ul>");
+        list = "ul";
+      }
+      out.push(`<li>${renderInline(m[1].replace(/^\[[ xX]\]\s*/, ""))}</li>`);
+    } else if (m = line.match(/^\d+\.\s+(.*)$/)) {
+      if (list !== "ol") {
+        closeList();
+        out.push("<ol>");
+        list = "ol";
+      }
+      out.push(`<li>${renderInline(m[1])}</li>`);
+    } else {
+      closeList();
+      out.push(`<p>${renderInline(line)}</p>`);
+    }
+  }
+  closeList();
+  return out.join("\n");
+}
 const postsContent = {
+  "marketing-digital-para-clinicas-medicas": `
+Atrair pacientes de forma previsível em 2026 exige presença digital em três frentes: aparecer no Google quando alguém procura seu serviço, construir confiança com conteúdo e redes sociais, e não perder nenhum contato que chega. Este guia reúne, em um só lugar, o passo a passo que a ClickNex usa em clínicas médicas e odontológicas — sempre dentro das normas do CFM.
+
+## O que é marketing digital para clínicas?
+
+É o conjunto de estratégias que faz sua clínica ser encontrada por quem já procura atendimento e transforma esse interesse em consultas agendadas. O marketing médico tem uma camada extra que o varejo não tem: precisa respeitar as regras de publicidade do Conselho Federal de Medicina (CFM) e da ANVISA. Fazer certo significa crescer sem risco de processo ético.
+
+## Quais são os pilares do marketing para clínicas?
+
+São cinco frentes que se complementam. Você não precisa de todas no primeiro mês, mas o resultado consistente vem da soma delas ao longo do tempo.
+
+### 1. SEO local e Google Meu Negócio
+
+A maioria das buscas por clínica tem intenção local ("dermatologista perto de mim", "clínica em Lavras"). Um perfil do Google Meu Negócio completo e otimizado costuma gerar mais ligações do que qualquer anúncio — e é gratuito. Veja o passo a passo em [SEO Local para Clínicas](/blog/seo-local-para-clinicas).
+
+### 2. Google Ads: demanda no momento certo
+
+O Google Ads coloca sua clínica na frente de quem já está procurando atendimento agora. É a estratégia mais rápida para gerar agendamentos. Entenda como estruturar campanhas no [guia de Google Ads para clínicas](/blog/google-ads-para-clinicas-medicas-guia) e quanto reservar de verba em [quanto custa anunciar no Google Ads](/blog/quanto-custa-anuncio-google-ads).
+
+### 3. Meta Ads (Instagram e Facebook)
+
+Enquanto o Google captura demanda existente, o Meta Ads cria demanda — ideal para procedimentos estéticos, check-ups e pacotes. O segredo é mostrar o ambiente da clínica, usar depoimentos autorizados e respeitar o CFM (sem "antes e depois" de cirurgia, sem promessa de resultado).
+
+### 4. Conteúdo e autoridade
+
+Artigos e vídeos educativos posicionam sua clínica como referência e geram tráfego orgânico que não para quando você desliga os anúncios. Responder dúvidas reais dos pacientes ("quando procurar um cardiologista?") também alimenta sua presença no Google e em assistentes de IA.
+
+### 5. Automação e CRM: pare de perder pacientes
+
+Gerar contato é só metade do trabalho — o dinheiro vaza quando ninguém responde a tempo. Um [CRM com WhatsApp](https://assine.clicknex.com.br) centraliza os atendimentos, distribui entre a equipe e dispara lembretes automáticos, reduzindo faltas em até 70%. Comece pelo conceito em [automação de marketing para pequenas empresas](/blog/automacao-de-marketing-para-pequenas-empresas).
+
+## Quanto custa fazer marketing para a sua clínica?
+
+Para clínicas de médio porte, um ponto de partida saudável é R$1.500 a R$3.000/mês em mídia (Google + Meta), além do investimento em estrutura (site, CRM, conteúdo). Nichos de alta concorrência como odontologia e dermatologia costumam exigir mais. O detalhamento está em [quanto custa anunciar no Google Ads](/blog/quanto-custa-anuncio-google-ads).
+
+## O que o CFM e a ANVISA permitem anunciar?
+
+Você pode divulgar serviços, especialidades, estrutura e conteúdo educativo. Não pode prometer resultados, usar "antes e depois" de procedimentos, sensacionalismo ou autopromoção que induza o paciente. O guia completo está em [Marketing Médico: CFM e ANVISA](/blog/marketing-medico-cfm-anvisa-guia-completo).
+
+## Como atrair pacientes nos primeiros 90 dias?
+
+A combinação que dá resultado mais rápido é: Google Meu Negócio otimizado + uma campanha de Google Ads enxuta + um canal de WhatsApp organizado para responder na hora. Veja o plano completo em [Como Atrair Mais Pacientes para sua Clínica](/blog/como-atrair-mais-pacientes-para-clinica).
+
+## Erros que fazem a clínica perder dinheiro
+
+- Mandar o anúncio para a home do site em vez de uma página focada em agendamento
+- Demorar horas (ou dias) para responder o WhatsApp de um lead quente
+- Não acompanhar quais campanhas geram consultas de verdade
+- Ignorar as avaliações no Google (positivas e negativas)
+- Anunciar fora das normas do CFM e arriscar processo ético
+
+## Perguntas frequentes
+
+### Marketing médico é permitido pelo CFM?
+
+Sim. O CFM permite a publicidade médica desde que seja informativa e ética — sem promessa de resultado, sensacionalismo ou "antes e depois". O segredo é a forma como a mensagem é construída.
+
+### Quanto tempo leva para ver resultado?
+
+Com Google Ads e Google Meu Negócio, os primeiros agendamentos costumam aparecer já nas primeiras semanas. SEO e conteúdo orgânico levam de 3 a 6 meses, mas trazem pacientes de forma contínua e sem custo por clique.
+
+### Vale mais a pena Google Ads ou Instagram?
+
+Depende do objetivo: Google Ads captura quem já procura atendimento (resultado mais rápido), enquanto o Instagram cria desejo para procedimentos eletivos e estéticos. O ideal é usar os dois de forma integrada.
+
+### Preciso de um site para anunciar?
+
+Sim — idealmente com uma página de agendamento focada em conversão. Mandar tráfego pago para uma home genérica desperdiça verba.
+
+## Conclusão
+
+Marketing para clínicas não é sobre "fazer post bonito": é sobre ser encontrado no momento certo, passar confiança e não perder nenhum contato. Comece pelo básico (Google Meu Negócio + WhatsApp organizado), adicione mídia paga e construa autoridade com conteúdo — sempre dentro das regras do CFM.
+`,
   "como-atrair-mais-pacientes-para-clinica": `
 ## Por que o Marketing Digital é Indispensável para Clínicas em 2025
 
@@ -4772,7 +4902,7 @@ const BlogPost = () => {
           "div",
           {
             className: "prose prose-blue prose-lg max-w-none prose-headings:text-blue-950 prose-a:text-blue-700 prose-a:no-underline hover:prose-a:underline",
-            dangerouslySetInnerHTML: { __html: content.replace(/\n/g, "<br/>").replace(/#{1,6}\s(.+)/g, (m, t) => `<h2>${t}</h2>`) }
+            dangerouslySetInnerHTML: { __html: renderMarkdown(content) }
           }
         ),
         /* @__PURE__ */ jsxs("div", { className: "mt-16 p-8 bg-blue-950 rounded-2xl text-white text-center", children: [

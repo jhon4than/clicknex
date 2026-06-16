@@ -7,6 +7,15 @@ import { Clock, ArrowRight } from 'lucide-react';
 
 export const blogPosts = [
   {
+    slug: 'marketing-digital-para-clinicas-medicas',
+    titulo: 'Marketing Digital para Clínicas Médicas: O Guia Completo (2026)',
+    resumo: 'O guia definitivo de marketing para clínicas: SEO local, Google Ads, Meta Ads, conteúdo, automação e CRM — tudo dentro das normas do CFM e ANVISA.',
+    cover: '/og/clicknex-default.jpg',
+    tags: ['marketing para clínicas', 'marketing médico', 'guia'],
+    publishedAt: '2026-06-16',
+    readingTime: '11 min',
+  },
+  {
     slug: 'como-atrair-mais-pacientes-para-clinica',
     titulo: 'Como Atrair Mais Pacientes para sua Clínica em 2025',
     resumo: 'Descubra as estratégias de marketing digital mais eficazes para aumentar o fluxo de pacientes na sua clínica médica ou consultório.',
