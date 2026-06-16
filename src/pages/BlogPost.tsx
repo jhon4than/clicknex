@@ -121,7 +121,65 @@ Sim — idealmente com uma página de agendamento focada em conversão. Mandar t
 
 Marketing para clínicas não é sobre "fazer post bonito": é sobre ser encontrado no momento certo, passar confiança e não perder nenhum contato. Comece pelo básico (Google Meu Negócio + WhatsApp organizado), adicione mídia paga e construa autoridade com conteúdo — sempre dentro das regras do CFM.
 `,
-  'como-atrair-mais-pacientes-para-clinica': `
+  'marketing-para-dentistas': `
+O marketing para dentistas funciona melhor quando combina três coisas: aparecer no Google na hora em que alguém procura um dentista, mostrar autoridade e confiança nas redes, e responder rápido cada contato que chega. Tudo isso respeitando o Código de Ética Odontológica e as normas do Conselho Federal de Odontologia (CFO). Este guia mostra como fazer na prática.
+
+## Por que marketing para dentistas é diferente?
+
+Odontologia é um dos nichos mais concorridos do marketing de saúde — e um dos mais regulados. O CFO proíbe sensacionalismo, promessas de resultado, divulgação de preços de forma que banalize o serviço e o uso de "antes e depois" sem autorização e contexto clínico. Ou seja: não basta anunciar bem, precisa anunciar dentro das regras. Fazer certo protege seu registro e ainda passa mais credibilidade ao paciente.
+
+Como a parte regulatória é parecida com a da medicina, vale ler também o nosso [guia de marketing médico (CFM e ANVISA)](/blog/marketing-medico-cfm-anvisa-guia-completo) — os princípios de publicidade ética são os mesmos.
+
+## Quais canais mais trazem pacientes para dentistas?
+
+### Google Ads: o paciente que já está procurando
+
+Quando alguém pesquisa "dentista perto de mim", "implante dentário [cidade]" ou "clareamento dental preço", está com intenção alta de marcar. O Google Ads coloca seu consultório exatamente nesse momento. Veja como estruturar campanhas no [guia de Google Ads para clínicas](/blog/google-ads-para-clinicas-medicas-guia).
+
+### Google Meu Negócio e SEO local
+
+A maioria das buscas por dentista é local. Um perfil do Google Meu Negócio completo, com fotos, horário e avaliações, costuma gerar mais ligações do que qualquer anúncio — e é de graça. Passo a passo em [SEO local para clínicas](/blog/seo-local-para-clinicas).
+
+### Instagram e Meta Ads
+
+O Instagram cria desejo para procedimentos estéticos (lentes, clareamento, alinhadores). Mostre o ambiente do consultório, a equipe e depoimentos autorizados — sempre sem "antes e depois" sensacionalista e sem promessa de resultado.
+
+## O que o CFO permite anunciar?
+
+- Pode: divulgar especialidades, estrutura, tecnologia, conteúdo educativo e horários.
+- Não pode: prometer resultado, usar sensacionalismo, expor pacientes sem autorização, banalizar procedimentos com foco em preço.
+
+## Quanto investir em marketing odontológico?
+
+Para um consultório de médio porte, um ponto de partida saudável é R$1.500 a R$3.000/mês em mídia, além de estrutura (site, CRM e conteúdo). Implantes e estética costumam exigir mais por serem mais concorridos. O importante é medir: cada campanha precisa mostrar quantos agendamentos gerou.
+
+## Erros comuns de clínicas odontológicas
+
+- Mandar o anúncio para o Instagram em vez de uma página de agendamento
+- Demorar para responder o WhatsApp — paciente de dor não espera
+- Não pedir avaliações no Google aos pacientes satisfeitos
+- Anunciar fora das regras do CFO e arriscar processo ético
+- Não organizar os contatos: um [CRM com WhatsApp](https://assine.clicknex.com.br) evita perder paciente por falta de follow-up
+
+## Perguntas frequentes
+
+### Dentista pode anunciar no Google e Instagram?
+
+Sim, desde que de forma ética e informativa, sem promessa de resultado nem sensacionalismo, conforme o Código de Ética Odontológica.
+
+### Posso mostrar antes e depois?
+
+Com muito cuidado: o CFO restringe o uso de "antes e depois". Use apenas com autorização do paciente e em contexto educativo, evitando apelo sensacionalista.
+
+### Qual canal traz resultado mais rápido?
+
+Google Ads + Google Meu Negócio costumam trazer os primeiros agendamentos em semanas, porque capturam quem já está procurando um dentista.
+
+## Conclusão
+
+Marketing para dentistas é sobre ser encontrado na hora certa, transmitir confiança e não perder nenhum contato — tudo dentro das regras do CFO. Comece pelo Google Meu Negócio e por um WhatsApp bem organizado, depois adicione mídia paga e conteúdo. Veja o panorama completo no nosso [guia de marketing para clínicas](/blog/marketing-digital-para-clinicas-medicas).
+\`,
+  'como-atrair-mais-pacientes-para-clinica': \`
 ## Por que o Marketing Digital é Indispensável para Clínicas em 2025
 
 O comportamento do paciente mudou. Antes de marcar uma consulta, **84% dos pacientes pesquisam online** sobre médicos, clínicas e tratamentos. Se sua clínica não aparece nas primeiras posições do Google, você está perdendo pacientes para a concorrência todos os dias.

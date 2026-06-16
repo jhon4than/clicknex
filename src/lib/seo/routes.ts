@@ -27,6 +27,7 @@ export const staticRoutes: SitemapRoute[] = [
   { path: '/contato', changefreq: 'monthly', priority: 0.7 },
   { path: '/blog', changefreq: 'daily', priority: 0.9 },
   { path: '/blog/marketing-digital-para-clinicas-medicas', changefreq: 'monthly', priority: 0.9 },
+  { path: '/blog/marketing-para-dentistas', changefreq: 'monthly', priority: 0.8 },
   { path: '/blog/como-atrair-mais-pacientes-para-clinica', changefreq: 'monthly', priority: 0.8 },
   { path: '/blog/google-ads-para-clinicas-medicas-guia', changefreq: 'monthly', priority: 0.8 },
   { path: '/blog/marketing-medico-cfm-anvisa-guia-completo', changefreq: 'monthly', priority: 0.8 },

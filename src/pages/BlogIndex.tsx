@@ -16,6 +16,15 @@ export const blogPosts = [
     readingTime: '11 min',
   },
   {
+    slug: 'marketing-para-dentistas',
+    titulo: 'Marketing para Dentistas: Como Atrair Mais Pacientes em 2026',
+    resumo: 'Guia de marketing odontológico: Google Ads, SEO local, Instagram e as regras do CFO para clínicas e consultórios de odontologia atraírem mais pacientes.',
+    cover: '/og/clicknex-default.jpg',
+    tags: ['marketing para dentistas', 'odontologia', 'marketing médico'],
+    publishedAt: '2026-06-16',
+    readingTime: '9 min',
+  },
+  {
     slug: 'como-atrair-mais-pacientes-para-clinica',
     titulo: 'Como Atrair Mais Pacientes para sua Clínica em 2025',
     resumo: 'Descubra as estratégias de marketing digital mais eficazes para aumentar o fluxo de pacientes na sua clínica médica ou consultório.',
